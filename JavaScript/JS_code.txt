@@ -1,0 +1,89 @@
+Code-Based Questions:
+Implement a function to reverse a string in Node.js without using the built-in reverse() method.
+
+javascript
+Copy code
+function reverseString(str) {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+Create a function that accepts an array of integers and returns the sum of the squared values greater than 10.
+
+javascript
+Copy code
+function sumOfSquaresGreaterThanTen(arr) {
+    return arr.filter(num => num * num > 10).map(num => num * num).reduce((acc, curr) => acc + curr, 0);
+}
+Write a Node.js script to read a JSON file, modify its contents by adding a new key-value pair, and write it back to the file.
+
+javascript
+Copy code
+const fs = require('fs');
+
+fs.readFile('data.json', 'utf8', (err, data) => {
+    if (err) throw err;
+    const jsonData = JSON.parse(data);
+    jsonData.newKey = 'newValue';
+    fs.writeFile('data.json', JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+        if (err) throw err;
+        console.log('File updated successfully!');
+    });
+});
+Implement a basic caching mechanism in Node.js using an object to store key-value pairs.
+
+javascript
+Copy code
+class Cache {
+    constructor() {
+        this.cache = {};
+    }
+
+    setValue(key, value) {
+        this.cache[key] = value;
+    }
+
+    getValue(key) {
+        return this.cache[key];
+    }
+
+    clearCache() {
+        this.cache = {};
+    }
+}
+
+// Usage
+const myCache = new Cache();
+myCache.setValue('key1', 'value1');
+console.log(myCache.getValue('key1')); // Output: value1
+Create an Express route that retrieves data from a MongoDB database and returns it as JSON.
+
+javascript
+Copy code
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+mongoose.connect('mongodb://localhost:27017/myDatabase', { useNewUrlParser: true, useUnifiedTopology: true });
+
+const dataSchema = new mongoose.Schema({
+    name: String,
+    age: Number
+});
+
+const Data = mongoose.model('Data', dataSchema);
+
+app.get('/data', async (req, res) => {
+    try {
+        const result = await Data.find();
+        res.json(result);
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+});
+
+app.listen(3000, () => {
+    console.log('Server started on port 3000');
+});

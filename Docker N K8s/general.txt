@@ -1,0 +1,6 @@
+K8s Open source container orchestration tool Developed by google.
+Docker open source platform to build containers
+
+Container -> Layer of images.
+
+App -> Docker File (generate image) -> Docker image -> Docker container -> Docker hub

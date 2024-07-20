@@ -1,0 +1,88 @@
+Node.js:
+Node.js is a JavaScript runtime environment that executes JavaScript code outside a web browser. It allows developers to run server-side JavaScript applications. You can start a Node.js application by running a command like node app.js in the terminal, where app.js is the main JavaScript file of your application.
+
+Nodemon:
+Nodemon, short for "Node Monitor," is a tool used during the development process to monitor changes in your Node.js application files. Instead of manually stopping and restarting the Node.js server every time you make changes to your code, Nodemon automatically restarts the server when it detects file changes.
+
+
+Basics of Node.js:
+What is Node.js? How does it differ from other server-side languages?
+Node.js is a runtime environment that executes JavaScript code server-side. It's built on Chrome's V8 JavaScript engine and is known for its event-driven, non-blocking I/O model, which makes it lightweight and efficient. Unlike traditional server-side languages (like PHP or Python), Node.js operates on a single-threaded, event-driven architecture.
+
+Explain the event-driven architecture of Node.js.
+Node.js uses an event-driven architecture where certain actions (like reading files or network requests) trigger events. It employs event loops to handle these events asynchronously without blocking other operations.
+
+What is the role of the event loop in Node.js?
+The event loop is at the core of Node.js, managing asynchronous operations. It continuously checks the event queue for pending events, processes them, and executes associated callback functions.
+
+How does Node.js handle asynchronous operations?
+Node.js uses callbacks, Promises, and async/await to handle asynchronous operations. It allows code to continue executing without waiting for the completion of time-consuming tasks, thereby enhancing efficiency.
+
+Modules and NPM:
+What are modules in Node.js? How are they different from CommonJS modules?
+Modules in Node.js are reusable pieces of code that encapsulate related functionality. They are based on the CommonJS module system, which enables code organization by allowing modules to export functions, objects, or variables.
+
+Explain the purpose of package.json in a Node.js project.
+package.json holds metadata about the project and manages dependencies. It includes project details, scripts, and dependencies information, facilitating package management using npm (Node Package Manager).
+
+How can you import modules in Node.js?
+Modules can be imported in Node.js using the require() function or using the import statement (with ES6 modules).
+
+Callbacks, Promises, and Async/Await:
+What are callbacks in Node.js? How do they work?
+Callbacks are functions passed as arguments to other functions. They are executed after the completion of a specific operation, allowing asynchronous tasks to be handled effectively.
+
+Explain the concept of Promises in Node.js.
+Promises are objects representing the eventual completion or failure of an asynchronous operation. They provide a cleaner way to handle asynchronous code compared to callbacks.
+
+What advantages do async/await offer over traditional Promise-based code?
+Async/await is a syntactical improvement over Promises, making asynchronous code more readable and maintainable by allowing developers to write asynchronous code in a synchronous-like manner.
+
+Express.js:
+What is Express.js? Why is it popular in Node.js development?
+Express.js is a minimal and flexible Node.js web application framework. It simplifies the process of building web applications and APIs in Node.js by providing robust features and middleware.
+
+Describe middleware in Express.js.
+Middleware in Express.js are functions that have access to the request and response objects. They can modify these objects, execute code, or terminate the request-response cycle.
+
+How do you handle routing in Express.js?
+Routing in Express.js is achieved by defining routes for different HTTP methods (GET, POST, etc.) and URLs. This allows the server to respond to client requests based on defined routes.
+
+
+Error Handling and Debugging:
+How can you handle errors in Node.js?
+Error handling in Node.js involves using try/catch blocks for synchronous code and leveraging promises or the .catch() method for handling asynchronous errors. Additionally, using middleware in frameworks like Express.js helps in centralized error handling.
+
+What tools and techniques can you use for debugging Node.js applications?
+Node.js provides a built-in debugger, and developers often use console.log statements for debugging. Additionally, tools like ndb, node-inspect, and IDEs such as Visual Studio Code offer debugging support.
+
+Security in Node.js:
+What are some best practices for securing a Node.js application?
+Best practices include input validation, avoiding outdated dependencies, implementing proper authentication and authorization mechanisms, using HTTPS, and employing security headers.
+
+Explain Cross-Site Scripting (XSS) and how to prevent it in Node.js.
+XSS is a security vulnerability where attackers inject malicious scripts into web pages. To prevent it in Node.js, developers should sanitize user inputs, use content security policy headers, and encode/escape output data.
+
+Performance and Scaling:
+How can you optimize the performance of a Node.js application?
+Performance optimization involves using caching mechanisms, employing efficient algorithms, optimizing database queries, and minimizing blocking operations.
+
+Discuss strategies for scaling Node.js applications horizontally and vertically.
+Horizontal scaling involves adding more machines/nodes, utilizing load balancers, and employing microservices architecture. Vertical scaling involves increasing the resources (CPU, RAM) of the existing machine.
+
+Testing in Node.js:
+What testing frameworks are commonly used in Node.js?
+Common testing frameworks include Jest, Mocha, Jasmine, and Ava for unit testing, integration testing, and end-to-end testing.
+
+How do you perform unit testing for Node.js applications?
+Unit testing in Node.js involves testing individual units of code (functions, modules) using frameworks like Jest or Mocha along with assertion libraries like Chai or built-in assert module.
+
+Additional Concepts:
+What is the purpose of the Node.js Buffer class?
+The Buffer class in Node.js is used to handle binary data. It provides methods to interact with binary data directly and is particularly useful for handling streams or interacting with file systems.
+
+Explain the streams in Node.js.
+Streams in Node.js are objects that enable reading or writing data continuously. They are particularly useful for handling large amounts of data efficiently without loading it entirely into memory.
+
+How does Node.js support child processes?
+Node.js allows the creation of child processes using the child_process module. It enables running additional Node.js instances or executing other commands as separate processes, facilitating parallelism.
