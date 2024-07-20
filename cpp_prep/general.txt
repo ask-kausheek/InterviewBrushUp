@@ -1,0 +1,20 @@
+CamelCase is used
+n = sizeof(arr)/sizeof(arr[0])
+isdigit
+islower
+to_string
+
+stack<map<string,int>> stk; -> initilaize -> stk.push({}); -> update the {} stack -> stk.top()[ele] = count;
+
+// convert final_count,  above stack to vector named elements 
+auto &final_count = stk.top();
+vector<pair<string,int>> elements(final_count.begin(), final_count.end());
+
+// Convert string to integer, of a substring of starting from index, i_start till |i-i_start| indexes.
+stoi(formula.substr(i_start,i-i_start));
+
+auto top = stk.top();  -> for (auto &p : top) { stk.top()[p.first] = p.second ;}
+
+Example : stk = [{"K": 4}, {"O": 1, "N": 1}, {"S": 1, "O": 3}] and top = {"S": 1, "O": 3} // Refer leetcode 726, number of atoms
+
+

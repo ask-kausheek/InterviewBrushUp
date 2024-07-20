@@ -1,0 +1,5 @@
+Private methods:
+    In JS, u define using # prefix
+    In python, u define using double underscore prefix(__)
+    In Java, declared with keyword, private
+    
