@@ -3,3 +3,7 @@ Private methods:
     In python, u define using double underscore prefix(__)
     In Java, declared with keyword, private
     
+rotateByK = Reverse the entire array + Reverse the first k elements + Reverse the remaining n - k elements
+
+x = x << 1; (Double x)
+y = y >> 1; (halve y)

@@ -1,8 +1,10 @@
-CamelCase is used
+CamelCase is used, g++ -o convert convert.cpp -> ./convert
+
 n = sizeof(arr)/sizeof(arr[0])
 isdigit
 islower
 to_string
+stoi
 
 stack<map<string,int>> stk; -> initilaize -> stk.push({}); -> update the {} stack -> stk.top()[ele] = count;
 
