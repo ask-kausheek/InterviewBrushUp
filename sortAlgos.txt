@@ -1,0 +1,34 @@
+------------------------Comparison-Based Sorting Algorithms
+
+Merge Sort is a stable, divide-and-conquer algorithm with a time complexity of 𝑂 ( 𝑛 log ⁡ 𝑛 )
+
+Quick Sort is an efficient, in-place, divide-and-conquer algorithm with an average time complexity of 𝑂 ( 𝑛 log ⁡ 𝑛 )
+
+Heap Sort is an in-place algorithm with a time complexity of 𝑂 ( 𝑛 log ⁡ 𝑛 ) 
+
+Selection Sort, Insertion Sort and Bubble Sort: Simple but have 𝑂 ( 𝑛^2 ) time complexity and are not suitable for large datasets.
+
+Tree Sort: 
+Average/Best Case: O(n log n) Adding one item to a Binary Search tree on average takes O(log n). So adding n items will take O(n log n) time
+Worst Case : O(n^2). can be improved by using a self-balancing binary search tree like Red Black Tree, AVL Tree. 
+Using self-balancing binary tree ,Tree Sort will take O(n log n) time to sort the array in worst case. 
+
+Tim Sort (Hybrid of Merge Sort and Insertion Sort): 
+    Average/Worst Case: O(nlogn) 
+    Best Case: 𝑂 ( 𝑛 )
+
+Intro Sort (Hybrid of Quick Sort and Heap Sort):
+    Average/Worst/Best Case: 𝑂 ( 𝑛 log ⁡ 𝑛 )
+
+-----------------Non-Comparison-Based Sorting Algorithms
+
+ Radix Sort is non-comparative, linear sorting algorithm that sorts by processing digit by digit, efficient for integers or strings with fixed-size keys.
+
+ Bucket Sort distributes elements into buckets and then sorts these buckets individually and  k is the number of buckets It is particularly useful for floating-point numbers in the range [0, 1), 
+     Best Case: when the elements are uniformly distributed, and each bucket contains same # of elements is 𝑂 ( 𝑛 )
+     Worst Case:when all the elements are placed in a single bucket, 𝑂 ( 𝑛 log ⁡ 𝑛 )
+
+ Counting Sort is a non-comparative integer algo, operates in 𝑂 ( 𝑛 + 𝑘 ), 𝑛: # of elements and 𝑘: difference btw max and min values in array.
+
+Sleep sort non-deterministic and highly unconventional algo, leverages concurrency features to spawn separate thread or process for each element in the input and Each thread then sleeps for an amount of time proportional to the element's value before printing the element.
+

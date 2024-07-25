@@ -20,3 +20,12 @@ auto top = stk.top();  -> for (auto &p : top) { stk.top()[p.first] = p.second ;}
 Example : stk = [{"K": 4}, {"O": 1, "N": 1}, {"S": 1, "O": 3}] and top = {"S": 1, "O": 3} // Refer leetcode 726, number of atoms
 
 
+Find Substring: str.find("substring")
+Substring: str.substr(start, length)
+map.find(key)
+
+Sort in Descending Order: std::sort(vec.begin(), vec.end(), std::greater<int>())
+
+
+ int minVal = *min_element(nums.begin(), nums.end());
+vector<int> count(n, 0);

@@ -38,8 +38,22 @@ for i, num := range nums
 
 and for channels
 for val := range ch
+------------------------------------------------------------------
+// Step 1: Count frequencies using a map
+    freq := make(map[int]int)
+
+    make(T, n)       slice      slice of type T with length n and capacity n
+    make(T, n, m)    slice      slice of type T with length n and capacity m
 
 ------------------------------------------
+Creating pair in
+
+type Element struct {
+    Value    int
+    Frequency int
+}
+
+elePair := make([]Element,len(freq))
 for i := 0; i < 10; i++ {
      if m[i] == 5 {
         continue // Skip the rest of the loop when i is 5
@@ -114,6 +128,9 @@ sort.Ints(slice) , sort.Strings(slice)
 sort.Slice(slice, func(i, j int) bool {
     return slice[i] < slice[j]
 })
+slice.Value > slice.Value // Decreasing order of values
+slice.Frequency < slice.Frequency // Increasing order of frequencies
+-----------------------------------------------------
 fmt.Scan(&x)
 ch <- value  // Send value
 value := <-ch // Receive value
