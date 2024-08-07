@@ -1,2 +1,4 @@
 Utility functions : Reusable piece of code to perform common tasks used throughout application.
                     DRY + maintainablity + clean
+
+backtracking approach: The problem often requires exploring different combinations of elements to form valid subsets

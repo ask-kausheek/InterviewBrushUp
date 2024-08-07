@@ -1,6 +1,37 @@
 K8s Open source container orchestration tool Developed by google.
 Docker open source platform to build containers
 
-Container -> Layer of images.
+Helm: A package manager for Kubernetes.
 
+Container -> Layer of images.
+Custom Resource Definitions (CRDs)
+Pod Security Policies (PSP):
+RBAC (Role-Based Access Control)
+
+Persistent Volumes (PV): storage resources in cluster that have been provisioned by an administrator or dynamically provisioned using Storage Classes.
+Persistent Volume Claims (PVC): These are requests for storage by a user. PVCs are used to abstract the details of how storage is provided.
 App -> Docker File (generate image) -> Docker image -> Docker container -> Docker hub
+
+
+Cluster IP: The internal IP address for a service, allowing communication within the cluster.
+Node IP: The IP address of a node, which can be used to access services exposed via NodePort or LoadBalancer from outside the cluster.
+Use ClusterIP for internal services, NodePort for external access, and LoadBalancer for cloud provider-managed load balancers.
+
+Kubernetes Service Ports:
+port(Service Port): The port exposed by the Kubernetes service. other services in the cluster use to communicate with the service.
+targetPort(App Port (containerPort)): The port on the Pod where the application is running. This is the app port.
+nodePort: The port on each node that routes to the service. It is used when exposing a service externally via a NodePort. external access.
+
+RoadMap Process of creating a pod request in Kubernetes:
+
+kubectl(kube-control) is a very tiny go language binary that basically talks to the Kube API server
+kubectl forms the API request and send it to the API server.
+API server authenticates and authorizes.
+API Server writes the pod object to the etcd data store. once the write is succesful, an acknowledgement is sent back to API server and to the client.
+Now pod is pending state.
+Scheduler sees that a new Pod object is created but is not bound to any node.
+Scheduler assigns a node to the pod and updates the API server.
+API server updates this to the etcd data store.
+kubelet keeps querying the API server for any new work loads. It sees that a new Pod is assigned to it.
+kubelet instructs the container runtimes like Docker to create the container and updates the container state back to the API Server.
+API server updates the pod state as Running to the etcd data store.

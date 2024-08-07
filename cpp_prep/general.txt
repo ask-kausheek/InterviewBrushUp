@@ -6,7 +6,10 @@ islower
 to_string
 stoi
 
-stack<map<string,int>> stk; -> initilaize -> stk.push({}); -> update the {} stack -> stk.top()[ele] = count;
+stack<map<string,int>> stk; -> initilaize -> stk.push({}); -> update the {} stack -> stk.top()[ele] = count; st.empty()
+    When reverse order is need try to think of stack.
+
+Monotonic stack pattern
 
 // convert final_count,  above stack to vector named elements 
 auto &final_count = stk.top();
@@ -22,10 +25,36 @@ Example : stk = [{"K": 4}, {"O": 1, "N": 1}, {"S": 1, "O": 3}] and top = {"S": 1
 
 Find Substring: str.find("substring")
 Substring: str.substr(start, length)
-map.find(key)
+-----------------------
+Find in cpp
+std::string::find: Returns size_t (position of the substring or std::string::npos). // Searches for a substring within a string.
+teststring.find(pattern)!= npos => then patern  is present
+
+std::map::find: Returns an iterator to the found element or map::end. // Searches for an element with a specific key in a map
+map.find(key) != m.end() is comparsion
 
 Sort in Descending Order: std::sort(vec.begin(), vec.end(), std::greater<int>())
 
 
  int minVal = *min_element(nums.begin(), nums.end());
 vector<int> count(n, 0);
+
+---------------------
+2d vector -> bool dp[n][n] , memeset(dp,false,sizeof(dp)), vector<vector<bool>>dp(n,vector<bool>(n,false))
+
+istringstream v1("1.2.3"); 
+getline(v1,             token,      '') => stoi(token)
+        istreamstring , string, delimeter
+=======================
+Get sum ->accumulate(start,end,sum)
+    int sum = 0;
+    int a[] = { 5, 10, 15 };
+    // Simple default accumulate function
+    cout << "\nResult using accumulate: ";
+    cout << accumulate(a, a + 3, sum); 
+    or accumulate(nums.begin(), nums.end(), 0);
+
+    accumulate(a, a + 3, sum, myfun); // customfunc
+     accumulate(a, a + 3, sum, std::minus<int>()); // sum - all elements from a to a+3
+     
+     count(str.begin(),str.end(),"1")

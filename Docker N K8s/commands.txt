@@ -1,0 +1,44 @@
+ConfigMaps are used to store configuration data in key-value pairs.
+kubectl get cm -A
+
+kubectl get services
+
+kubectl get replicasets
+
+kubectl get deployments
+
+kubectl get secrets
+
+kubectl get pvc(or pv)
+
+kubectl get namespaces
+
+kubectl get nodes
+
+kubectl exec -it <pod-name> -- /bin/bash
+
+List All Resources in All Namespaces: kubectl get all -A
+
+Output in Formats: kubectl get pods -o yaml(or json or wide)
+
+Displays cluster endpoint and other essential information: kubectl cluster-info
+
+Scales the number of replicas for a deployment to 3: 
+kubectl scale deployment <deployment-name> --replicas=3
+
+kubectl port-forward <pod-name> <local-port>:<pod-port>
+
+kubectl version
+
+kubectl config view(KUBECONFIG)
+
+kubectl run nginx --image=nginx
+
+Sets verbosity level for debugging output.(monitor the API calls)
+kubectl get pods -v=7
+
+Apply Changes:
+ from a File: kubectl apply -f <file.yaml>
+ from Directory: kubectl apply -f /path/to/directory/
+ Checks if resource manifests are correct without applying them(Validation): kubectl apply -f <file.yaml> --dry-run=client
+
